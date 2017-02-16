@@ -1,0 +1,721 @@
+<ruleset>
+  <server-settings>
+    <server>0.0.0.0:7001</server>
+    <execute-pyref>true</execute-pyref>
+    <dev-allow>
+      127.0.0.1
+    </dev-allow>
+    <dev-htpasswd>deliv-users.htpasswd</dev-htpasswd>
+  </server-settings>
+
+    <proxy path="/_theme">
+      <dest href="{here}/themes/hw2010" />
+    </proxy>
+
+
+    <proxy path="regex:/.*/campaigns/hw2010/maintenance"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 maintenance2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/get-it-right/wrong-right/.+"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010
+           wrong-right-detail2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/get-it-right/wrong-right"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010 wrong-right2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/partners/eu-partners-folder"
+           strip-script-name="0" keep-host="1" class="global2010 page2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/partners/eu-partners"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 eu-partners2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/partners/focal-points-folder"
+           strip-script-name="0" keep-host="1" class="global2010 page2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/partners/focal-points"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 eu-partners2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+
+    <proxy path="regex:/.*/campaigns/hw2010/get-it-right"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/get-involved"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 get-involved2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/resources"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 resources2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/about"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 about2010">
+           <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/partners"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 partners2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy
+    path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia/pictures($|/$)"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 album2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy
+    path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia/pictures/.*"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 gallery2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 multimedia2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/press/%40%40slc.telescope.*"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 telescope2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/press"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 press2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+
+    <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 press-and-multimedia2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/events/%40%40slc.telescope.*"
+           strip-script-name="0" keep-host="1" class="global2010 eventtelescope2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/news/%40%40slc.telescope.*"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 telescope2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/news/.+"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 newsitem2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/news"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 news2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/events"
+           strip-script-name="0" keep-host="1" class="global2010 page2010 events2010">
+        <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy
+    path="regex:/.*/campaigns/hw2010/landingpage"
+           strip-script-name="0" keep-host="1" class="global2010 page2010">
+      <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+    <proxy path="regex:/.*/campaigns/hw2010/($|index.*)"
+           strip-script-name="0" keep-host="1" class="global2010 main2010">
+      <dest href="http://oshaweb01.mainstrat.com:8080" />
+    </proxy>
+
+
+
+<!-- Proxy for hw2012
+
+-->
+
+
+  <proxy path="regex:^/Behaviour">
+    <dest href="{here}/themes/hw2012" />
+  </proxy>
+
+  <proxy path="regex:^/main.js$">
+    <dest href="{here}/themes/hw2012" />
+  </proxy>
+
+  <proxy path="regex:^/domReady.js$">
+    <dest href="{here}/themes/hw2012" />
+  </proxy>
+
+  <proxy path="regex:^/order.js$">
+    <dest href="{here}/themes/hw2012" />
+  </proxy>
+
+  <proxy path="/_themes">
+    <dest href="{here}/themes" />
+  </proxy>
+
+  <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/..(/|/hw2012)*$" class="general main">
+    <dest href="http://oshaweb01.mainstrat.com:8080" />
+  </proxy>
+
+  <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/../events$" class="general events">
+    <dest href="http://oshaweb01.mainstrat.com:8080" />
+  </proxy>
+
+  <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/.*get-involved/become-a-national-partner/feedback$" class="general feedback">
+    <dest href="http://oshaweb01.mainstrat.com:8080" />
+  </proxy>
+
+  <proxy
+      path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/.*hw.telescope.*"
+      strip-script-name="0"
+      keep-host="1"
+      class="general telescope">
+    <dest href="http://oshaweb01.mainstrat.com:8080" />
+  </proxy>
+
+  <proxy path="wildcard:*">
+    <dest href="http://oshaweb01.mainstrat.com:8080" />
+  </proxy>
+
+
+
+
+
+
+
+
+
+  <rule class="maintenance2010" suppress-standard="1">
+  </rule>
+
+  <rule class="get-it-right2010" suppress-standard="1">
+  </rule>
+
+  <rule class="wrong-right2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Wide-content.dwt" />
+    <replace content="children:div#mainContent"
+             theme="children:div#mainContent" />
+  </rule>
+
+  <rule class="wrong-right-detail2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Rich-page.dwt" />
+    <replace content="children:div#mainContent"
+             theme="children:div#mainContent" />
+  </rule>
+
+  <rule class="eu-partners2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Wide-content.dwt" />
+    <replace content="children:div#mainContent"
+             theme="children:div#mainContent" />
+  </rule>
+
+  <rule class="get-involved2010" suppress-standard="1">
+  </rule>
+
+  <rule class="resources2010" suppress-standard="1">
+  </rule>
+
+  <rule class="about2010" suppress-standard="1">
+  </rule>
+
+  <rule class="partners2010" suppress-standard="1">
+  </rule>
+
+  <rule class="press-and-multimedia2010" suppress-standard="1">
+  </rule>
+
+  <rule class="gallery2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Gallery.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="album2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Album.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="multimedia2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Wide-content.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="press2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Rich-page.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="telescope2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Rich-page.dwt" />
+    <replace content="children://div[@id='region-content']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="eventtelescope2010" suppress-standard="1">
+    <theme href="/_theme/Screens/events/event.html" />
+    <!--replace content="children://div[@id='region-content']"
+             theme="children://div[@id='mainContent']" /-->
+    <replace content="children://div[@class='vevent']/h1/span"
+             theme="children://div[@id='mainContent']/h1" />
+    <replace content="children://div[@class='vevent']/p[@class='documentDescription']/span[@id='parent-fieldname-description']"
+             theme="children://div[@id='introduction']/p" />
+
+    <!-- Copy the event details -->
+    <replace content="children://*[@id='parent-fieldname-startDate']"
+             theme="children:/html/body/div/dl/dd" move="0" />
+    <replace content="children://*[@id='parent-fieldname-endDate']"
+             theme="children:/html/body/div/dl/dd[2]" move="0" />
+    <replace content="//*[@id='parent-fieldname-eventUrl']"
+             theme="children:/html/body/div/dl/dd[4]" move="0" />
+    <replace content="children://*[@id='parent-fieldname-contactName']"
+             theme="children:/html/body/div/dl/dd[5]" move="0" />
+    <replace content="children://td[@class='email']"
+             theme="children:/html/body/div/dl/dd[6]" move="0" />
+    <replace content="children://*[@id='parent-fieldname-contactPhone']"
+             theme="children:/html/body/div/dl/dd[7]" move="0" />
+    <replace content="children://*[@id='parent-fieldname-location']"
+             theme="children:/html/body/div/dl/dd[8]" move="0" />
+
+    <drop theme="/html/body/div/dl/dt[8]" if-content="not:#parent-fieldname-location" />
+    <drop theme="/html/body/div/dl/dd[8]" if-content="not:#parent-fieldname-location" />
+
+    <drop theme="/html/body/div/dl/dt[7]" if-content="not:#parent-fieldname-contactPhone" />
+    <drop theme="/html/body/div/dl/dd[7]" if-content="not:#parent-fieldname-contactPhone" />
+
+    <drop theme="/html/body/div/dl/dt[6]" if-content="not:#parent-fieldname-contactEmail" />
+    <drop theme="/html/body/div/dl/dd[6]" if-content="not:#parent-fieldname-contactEmail" />
+
+    <drop theme="/html/body/div/dl/dt[5]" if-content="not:#parent-fieldname-contactName" />
+    <drop theme="/html/body/div/dl/dd[5]" if-content="not:#parent-fieldname-contactName" />
+
+    <drop theme="/html/body/div/dl/dt[4]" if-content="not:#parent-fieldname-eventUrl" />
+    <drop theme="/html/body/div/dl/dd[4]" if-content="not:#parent-fieldname-eventUrl" />
+
+    <drop theme="/html/body/div/dl/dt[3]" />
+    <drop theme="/html/body/div/dl/dd[3]" />
+
+    <replace content="children:div#parent-fieldname-text div#parent-fieldname-text"
+            theme="/html/body/div/p[4]" />
+
+    <drop theme="/html/body/div/iframe" />
+    <drop theme="/html/body/div/p[4]" />
+    <drop theme="/html/body/div/p[3]" />
+    <drop theme="/html/body/div/p[2]" />
+    <drop theme="/html/body/div/p[1]" />
+
+
+    <!-- portlets -->
+    <drop theme="#portletNews" />
+    <drop theme="#portletEvents" />
+    <append content="children://div[@id='portal-column-two']"
+            theme="children:div#portlets" />
+
+    <replace content="attributes(href):div.attachmentBox span a"
+             theme="attributes(href):div#portletDownload p a" />
+    <replace content="children:div.attachmentBox span span.discreet"
+             theme="children:div#portletDownload p a em.discrete" />
+    <drop theme="div#portletDownload" if-content="not:div.attachmentBox span a" />
+
+    <replace theme="form#languageSelector p  select"
+                 content="children:ul#portal-languageselector li" move="0" />
+
+    <drop theme="//div[@id='portletNews']/ul/li[5]" />
+        <drop theme="//div[@id='portletNews']/ul/li[5]" />
+
+    <!-- temporarily drop banners -->
+    <drop theme="//div[@id='banners']" />
+        <!-- the TAB -->
+    <replace content="children:div#campaign-slogan-statement"
+                 theme="children:p#tab" move="0" />
+
+  </rule>
+
+  <rule class="news2010" suppress-standard="1">
+    <theme href="/_theme/Templates/News.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="newsitem2010" suppress-standard="1">
+    <theme href="/_theme/Templates/News.dwt" />
+    <replace content="children://div[@id='content']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="events2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Events.dwt" />
+    <replace content="children://div[@id='mainContent']"
+             theme="children://div[@id='mainContent']" />
+    <drop theme="//div[@class='mainEvent']" />
+  </rule>
+
+
+  <rule class="page2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Rich-page.dwt" />
+    <replace content="children://div[@id='content']/h1[@id='parent-fieldname-title']"
+             theme="children://div[@id='mainContent']/h1" />
+    <replace content="children://div[@id='content']/h1/span"
+             theme="children://div[@id='mainContent']/h1" />
+
+    <replace content="children://div[@id='content']/div[@class='documentDescription']"
+             theme="children://div[@id='introduction']/p" />
+    <replace content="children://div[@id='content']/p[@class='documentDescription']"
+             theme="children://div[@id='introduction']/p" />
+    <append content="children://div[@id='content']/div[@id='content-core']"
+             theme="children://div[@id='mainContent']" />
+    <append content="children://div[@id='content']/div[@id='parent-fieldname-text']"
+             theme="children://div[@id='mainContent']" />
+
+    <!-- portlets -->
+    <replace content="children://div[@id='portal-column-two']"
+             theme="children://div[@id='portlets']" />
+
+    <replace theme="form#languageSelector p  select"
+             content="children:ul#portal-languageselector li" move="0" />
+
+    <drop theme="//div[@id='portletNews']/ul/li[5]" />
+    <drop theme="//div[@id='portletNews']/ul/li[5]" />
+
+    <!-- temporarily drop banners -->
+    <drop theme="//div[@id='banners']" />
+    <!-- the TAB -->
+    <replace content="children:div#campaign-slogan-statement"
+             theme="children:p#tab" move="0" />
+  </rule>
+
+  <rule class="main2010" suppress-standard="1">
+    <theme href="/_theme/Templates/Home.dwt" />
+    <!-- News -->
+
+    <replace content="children:div#latestNews"
+             theme="children:div#latestNews" />
+
+    <!-- Ticker -->
+    <replace content="children:div#portletNews ul"
+             theme="children:ul#news" />
+
+    <replace content="children://div[@id='upcomingEvent']"
+             theme="children://div[@id='upcomingEvent']" move="0" />
+
+    <drop theme="//p[@id='bannerSpace']" />
+
+
+    <!-- carousel content translations -->
+    <replace content="children:div#hw2010_carousel_slogan"
+             theme="children:ul#sections li.item-0" />
+    <replace content="children:div#hw2010_carousel_maintenance"
+             theme="children:ul#sections li.item-1" />
+
+    <replace content="children:div#hw2010_carousel_getitright"
+             theme="children:ul#sections li.item-2" />
+    <replace content="children:div#hw2010_carousel_getinvolved"
+             theme="children:ul#sections li.item-3" />
+    <replace content="children:div#hw2010_carousel_resources"
+             theme="children:ul#sections li.item-4" />
+    <replace content="children:div#hw2010_carousel_about"
+             theme="children:ul#sections li.item-5" />
+    <replace content="children:div#hw2010_carousel_partners"
+             theme="children:ul#sections li.item-6" />
+    <replace content="children:div#hw2010_carousel_press"
+             theme="children:ul#sections li.item-7" />
+  </rule>
+
+
+  <rule class="global2010" suppress-standard="1">
+    <replace content="children:/html/head/title"
+             theme="children:/html/head/title" nocontent="ignore" />
+
+    <!-- language attribute on html -->
+    <append content="attributes(lang):html" theme="attributes:html" />
+
+    <append theme="/html/head"
+            content="/html/head/link[@rel='canonical']" />
+    <!-- content meta tags -->
+    <prepend content="//meta" theme="children:head" />
+    <!-- Navigation -->
+    <replace content="//ul[@id='globalNavigation']"
+             theme="//ul[@id='globalNavigation']" />
+    <!-- osha logo -->
+    <replace content="children://div[@id='title-agency']"
+             theme="children://p[@id='osha']" />
+    <!-- footer -->
+    <drop content="//li[@class='breadcrumbSeparator']" />
+    <drop content="//li[@id='footeraction-sendto']" />
+    <drop content="//li[@id='footeraction-sitemap']" />
+    <drop content="//li[@id='footeraction-osha_update']" />
+    <drop content="//li[@id='footeraction-osha_translations']" />
+    <!--drop content="//span[@class='breadcrumbSeparator']" /-->
+    <drop content="//div[@id='footeractions-wrapper']/ul/li/img" />
+    <prepend content="//div[@id='footeractions-wrapper']/ul/li"
+             theme="children://ul[@id='appendix']" />
+
+    <replace theme="form#languageSelector select"
+             content="children:ul#portal-languageselector li" move="0" />
+
+    <!-- page not found -->
+    <replace content="children://div[@id='region-content']"
+             theme="children://div[@id='mainContent']"
+             if-content="body.template-default_error_message "/>
+    <drop theme="//ul[@id='globalNavigation']/li"
+          if-content="body.template-default_error_message" />
+    <drop theme="p#top"
+          if-content="body.template-default_error_message" />
+    <drop theme="p#tab"
+          if-content="body.template-default_error_message" />
+    <drop theme="div#secondaryContent"
+          if-content="body.template-default_error_message" />
+    <drop theme="div.portlet-static-conditions-of-use"
+          if-content="body.template-default_error_message" />
+  </rule>
+
+
+
+  <!--
+
+	*************   Rules for hw2012 ********************
+
+	-->
+
+
+
+
+
+
+  <!-- RULES -->
+  <rule class="general" suppress-standard="1">
+    <!-- rules for every page -->
+    <replace content="attributes(class,lang):#htmlcontrol"
+             theme="attributes:html" />
+    <replace content="/html/head/title" theme="/html/head/title" />
+    <append content="/html/head/meta" theme="/html/head" />
+    <replace content="children:#hw2012Navigation"
+             theme="children:#globalNavigation" />
+    <replace content="children:#hw2012languages"
+             theme="children:#languages" />
+    <replace content="script[data-main$='/main']"
+             theme="script[data-main$='main']" />
+    <!-- footer -->
+    <drop content="//li[@id='footeraction-separator-print']" />
+    <drop content="//li[@id='footeraction-sendto']" />
+    <drop content="//li[@id='footeraction-sitemap']" />
+    <drop content="//li[@id='footeraction-osha_update']" />
+    <drop content="//li[@id='footeraction-osha_translations']" />
+    <!--drop content="//span[@class='breadcrumbSeparator']" /-->
+    <drop content="//div[@id='footeractions-wrapper']/ul/li/img" />
+    <replace content="children: #footeractions-wrapper ul li"
+             theme="children:#colofon" />
+    <append content="children:#hw2012-ga"
+            theme="children:body" />
+    <drop theme="#tagline a" />
+    <drop content="#slogan br"/>
+    <append content="children:#slogan"
+            theme="children:#tagline" />
+
+  </rule>
+
+  <rule class="landingpage" suppress-standard="1">
+    <replace content="#introduction #title"
+             theme="#introduction #title" />
+    <replace content="#introduction #body"
+             theme="#introduction p" />
+    <replace content="#introduction .navigation"
+             theme="#introduction .navigation" />
+    <replace content="#introduction figure"
+             theme="#introduction figure" />
+  </rule>
+
+  <rule class="about" suppress-standard="1">
+    <theme href="/_themes/hw2012/about.html" />
+  </rule>
+
+  <rule class="get-involved" suppress-standard="1">
+    <theme href="/_themes/hw2012/get-involved.html" />
+  </rule>
+
+  <rule class="leadership" suppress-standard="1">
+    <theme href="/_themes/hw2012/leadership.html" />
+  </rule>
+
+  <rule class="media" suppress-standard="1">
+    <theme href="/_themes/hw2012/media.html" />
+  </rule>
+
+  <rule class="resources" suppress-standard="1">
+    <theme href="/_themes/hw2012/resources.html" />
+  </rule>
+
+  <rule class="worker-participation" suppress-standard="1">
+    <theme href="/_themes/hw2012/participation.html" />
+  </rule>
+
+  <rule class="detail" suppress-standard="1">
+    <replace content="#column-a"
+             theme="#column-a" />
+    <replace content="#column-b"
+             theme="#column-b" />
+  </rule>
+
+  <rule class="detail-benefits" suppress-standard="1">
+    <theme href="/_themes/hw2012/benefits.html" />
+  </rule>
+
+  <rule class="press" suppress-standard="1">
+    <theme href="/_themes/hw2012/news.html" />
+    <replace content="children:#title"
+             theme="children:#title" />
+    <drop theme="div.newsItem"/>
+    <append content="children:#mainContent"
+             theme="children:#mainContent" />
+  </rule>
+
+  <rule class="resource-listing" suppress-standard="1">
+    <theme href="/_themes/hw2012/campaign-essentials.html" />
+
+    <replace content="#title"
+             theme="#title" />
+    <replace content="children:p.documentDescription"
+             theme="#title + p" />
+    <replace content="div.downloads"
+             theme="div.downloads" />
+  </rule>
+
+  <rule class="gallery" suppress-standard="1">
+    <theme href="/_themes/hw2012/gallery.html" />
+    <replace content="children:#mainContent"
+             theme="children:#mainContent" />
+  </rule>
+
+  <rule class="news" suppress-standard="1">
+    <theme href="/_themes/hw2012/news.html" />
+
+    <replace content="children:h1#title"
+             theme="children:h1#title" />
+    <drop theme="div.newsItem" />
+    <append content="div.newsItem"
+          theme="h1#title"/>
+  </rule>
+
+  <rule class="events" suppress-standard="1">
+    <theme href="/_themes/hw2012/events.html" />
+    <replace content="children:#mainContent"
+             theme="children:#mainContent" />
+  </rule>
+
+  <rule class="publications" suppress-standard="1">
+    <theme href="/_themes/hw2012/publications.html" />
+    <replace content="children:#content"
+             theme="children:#mainContent" />
+  </rule>
+
+  <rule class="napofilm" suppress-standard="1">
+    <theme href="/_themes/hw2012/benefits.html" />
+    <replace content="children:#napofilm"
+             theme="children:#column-a" />
+    <replace content="children:#column-b"
+             theme="children:#column-b" />
+  </rule>
+
+  <rule class="partner" suppress-standard="1">
+    <theme href="/_themes/hw2012/partners.html" />
+    <replace content="children:h1.title"
+             theme="children:h1#title" />
+    <drop theme="#mainContent > p" />
+    <append content="#column-b > p"
+             theme="#title" />
+    <append content="children:#column-b"
+             theme="children:#mainContent"/>
+    <replace content=".partnerListing"
+            theme=".partnerListing" />
+  </rule>
+
+  <rule class="partner-detail" suppress-standard="1">
+    <theme href="/_themes/hw2012/campaign-partner-detail.html" />
+    <replace content="children:#title"
+            theme="children:#title" />
+    <replace content="children:#campaign-partner-details"
+            theme="children:#campaign-partner-details" />
+  </rule>
+
+  <rule class="form" suppress-standard="1">
+    <theme href="/_themes/hw2012/form.html" />
+    <replace content="children:#parent-fieldname-title"
+             theme="children:h1#title" />
+    <replace content="children:#parent-fieldname-text"
+             theme="children:#application-form"/>
+    <append content="dl.portalMessage"
+            theme="#title"/>
+  </rule>
+
+
+  <rule class="participation" suppress-standard="1">
+    <theme href="/_themes/hw2012/participation.html" />
+    <replace content="#introduction #title"
+             theme="#introduction #title" />
+    <replace content="#introduction #body"
+             theme="#introduction p" />
+    <replace content="#introduction .navigation"
+             theme="#introduction .navigation" />
+    <replace content="#introduction figure"
+             theme="#introduction figure" />
+  </rule>
+
+  <rule class="feedback" suppress-standard="1">
+    <theme href="/_themes/hw2012/Templates/content-c.dwt" />
+    <drop theme="#column-a p" />
+    <replace content="children:#parent-fieldname-title"
+             theme="children:#title " />
+    <append content="children:#parent-fieldname-description"
+             theme="children:#column-a"/>
+    <replace content="children:#content-core"
+             theme="children:#column-b" />
+  </rule>
+
+  <rule class="telescope" suppress-standard="1">
+    <theme href="/_themes/hw2012/gallery.html" />
+    <drop content="#content-history"/>
+    <drop content="#belowcontent-portlets" />
+    <drop content="#slc-linkcollection-linkbox" />
+    <drop content="#plone-document-byline" />
+    <drop content="#slc-outdated" />
+    <replace content="children://div[@id='region-content']"
+             theme="children://div[@id='mainContent']" />
+  </rule>
+
+  <rule class="main" suppress-standard="1">
+    <theme href="/_themes/hw2012/index.html" />
+    <replace content="children:#hw2012languages"
+             theme="children:#languages" />
+
+    <replace content="#news-container"
+             theme="#news-container"/>
+    <replace content="#events-container"
+             theme="#events-container" />
+    <replace content="children:#promo"
+             theme="children:#promo" />
+
+    <replace content="children:#ocp-logos"
+             theme="children:#ocp-logos" />
+  </rule>
+
+</ruleset>
