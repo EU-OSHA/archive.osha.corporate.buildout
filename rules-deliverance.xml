@@ -15,133 +15,133 @@
 
     <proxy path="regex:/.*/campaigns/hw2010/maintenance"
            strip-script-name="0" keep-host="1" class="global2010 page2010 maintenance2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/get-it-right/wrong-right/.+"
            strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010
            wrong-right-detail2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/get-it-right/wrong-right"
            strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010 wrong-right2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/partners/eu-partners-folder"
            strip-script-name="0" keep-host="1" class="global2010 page2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/partners/eu-partners"
            strip-script-name="0" keep-host="1" class="global2010 page2010 eu-partners2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/partners/focal-points-folder"
            strip-script-name="0" keep-host="1" class="global2010 page2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/partners/focal-points"
            strip-script-name="0" keep-host="1" class="global2010 page2010 eu-partners2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
 
     <proxy path="regex:/.*/campaigns/hw2010/get-it-right"
            strip-script-name="0" keep-host="1" class="global2010 page2010 get-it-right2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/get-involved"
            strip-script-name="0" keep-host="1" class="global2010 page2010 get-involved2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/resources"
            strip-script-name="0" keep-host="1" class="global2010 page2010 resources2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/about"
            strip-script-name="0" keep-host="1" class="global2010 page2010 about2010">
-           <dest href="http://oshaweb01.mainstrat.com:8080" />
+           <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/partners"
            strip-script-name="0" keep-host="1" class="global2010 page2010 partners2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy
     path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia/pictures($|/$)"
            strip-script-name="0" keep-host="1" class="global2010 page2010 album2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy
     path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia/pictures/.*"
            strip-script-name="0" keep-host="1" class="global2010 page2010 gallery2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/multimedia"
            strip-script-name="0" keep-host="1" class="global2010 page2010 multimedia2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/press/%40%40slc.telescope.*"
            strip-script-name="0" keep-host="1" class="global2010 page2010 telescope2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia/press"
            strip-script-name="0" keep-host="1" class="global2010 page2010 press2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
 
     <proxy path="regex:/.*/campaigns/hw2010/press-and-multimedia"
            strip-script-name="0" keep-host="1" class="global2010 page2010 press-and-multimedia2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/events/%40%40slc.telescope.*"
            strip-script-name="0" keep-host="1" class="global2010 eventtelescope2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/news/%40%40slc.telescope.*"
            strip-script-name="0" keep-host="1" class="global2010 page2010 telescope2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/news/.+"
            strip-script-name="0" keep-host="1" class="global2010 page2010 newsitem2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/news"
            strip-script-name="0" keep-host="1" class="global2010 page2010 news2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/events"
            strip-script-name="0" keep-host="1" class="global2010 page2010 events2010">
-        <dest href="http://oshaweb01.mainstrat.com:8080" />
+        <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy
     path="regex:/.*/campaigns/hw2010/landingpage"
            strip-script-name="0" keep-host="1" class="global2010 page2010">
-      <dest href="http://oshaweb01.mainstrat.com:8080" />
+      <dest href="http://127.0.0.1:6060" />
     </proxy>
 
     <proxy path="regex:/.*/campaigns/hw2010/($|index.*)"
            strip-script-name="0" keep-host="1" class="global2010 main2010">
-      <dest href="http://oshaweb01.mainstrat.com:8080" />
+      <dest href="http://127.0.0.1:6060" />
     </proxy>
 
 
@@ -172,15 +172,15 @@
   </proxy>
 
   <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/..(/|/hw2012)*$" class="general main">
-    <dest href="http://oshaweb01.mainstrat.com:8080" />
+    <dest href="http://127.0.0.1:6060" />
   </proxy>
 
   <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/../events$" class="general events">
-    <dest href="http://oshaweb01.mainstrat.com:8080" />
+    <dest href="http://127.0.0.1:6060" />
   </proxy>
 
   <proxy path="regex:^/(.*)/sub/hw2012/VirtualHostRoot/.*get-involved/become-a-national-partner/feedback$" class="general feedback">
-    <dest href="http://oshaweb01.mainstrat.com:8080" />
+    <dest href="http://127.0.0.1:6060" />
   </proxy>
 
   <proxy
@@ -188,11 +188,11 @@
       strip-script-name="0"
       keep-host="1"
       class="general telescope">
-    <dest href="http://oshaweb01.mainstrat.com:8080" />
+    <dest href="http://127.0.0.1:6060" />
   </proxy>
 
   <proxy path="wildcard:*">
-    <dest href="http://oshaweb01.mainstrat.com:8080" />
+    <dest href="http://127.0.0.1:6060" />
   </proxy>
 
 
